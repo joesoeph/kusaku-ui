@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Rose:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Transaction Pending</title>
+  </head>
+  <body>
+    <div class="container max-w-[768px]">
+      <!-- App Bar -->
+      <div
+        class="fixed left-0 top-0 z-10 flex w-full items-center gap-5 bg-white p-4 text-gray-900"
+      >
+        <a
+          href="#"
+          class="hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
+          onclick="history.back()"
+        >
+          <span
+            class="i-material-symbols-arrow-left-alt-rounded text-icon-md block"
+          ></span>
+        </a>
+        <p class="text-lg font-semibold">Status Transaksi</p>
+      </div>
+      <!-- ./ App Bar -->
+
+      <div class="flex min-h-dvh flex-col gap-4 bg-green-50 pb-[80px]">
+        <div class="relative h-[260px] bg-gray-400"></div>
+        <div class="absolute mt-[92px] flex w-full flex-col gap-10 p-4">
+          <!-- Title -->
+          <div class="flex flex-col">
+            <h1 class="text-center text-lg font-semibold text-white">
+              Transaksi Sedang Diproses
+            </h1>
+          </div>
+          <!-- ./ Title -->
+
+          <!-- Card Transaction Info -->
+          <div class="flex flex-col gap-4 rounded-2xl bg-white p-4 shadow-md">
+            <p class="text-right text-xs text-gray-900">
+              ID Transaksi #KS08387847
+            </p>
+            <p class="text-center text-2xl font-bold text-gray-900">
+              - Rp. 300.000
+            </p>
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between">
+                <p class="text-xs text-gray-500">Kategori</p>
+                <p class="text-xs font-semibold text-gray-900">Uang Keluar</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-xs text-gray-500">Penerima</p>
+                <p class="text-xs font-semibold text-gray-900">Jane Dane</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-xs text-gray-500">Bank Penerima</p>
+                <p class="text-xs font-semibold text-gray-900">BCA</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-xs text-gray-500">Nomor Rekening</p>
+                <p class="text-xs font-semibold text-gray-900">2397582398</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-xs text-gray-500">Waktu Transaksi</p>
+                <p class="text-xs font-semibold text-gray-900">
+                  20 Juni 2024 19:00 WIB
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ./ Card Transaction Info -->
+
+          <!-- Button Action -->
+          <button
+            type="button"
+            class="border-brands-light-green text-brands-light-green hover:bg-brands-light-green inline-flex items-center justify-center gap-2 rounded-2xl border-2 bg-transparent p-2.5 text-sm font-semibold uppercase hover:text-white focus:border-0 focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-transparent disabled:text-gray-400"
+          >
+            <span class="i-material-symbols-close text-icon-md"></span>
+            <span>Batalkan Transaksi</span>
+          </button>
+          <!-- ./ Button Action -->
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <div
+        class="fixed bottom-0 left-0 z-10 flex w-full justify-evenly bg-white"
+      >
+        <a
+          href="#"
+          class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <span
+            class="i-material-symbols-home-outline-rounded text-icon-md inline group-hover:hidden"
+          ></span>
+          <span
+            class="i-material-symbols-home-rounded text-icon-md hidden group-hover:inline"
+          ></span>
+          <span class="text-xs font-semibold">Beranda</span>
+        </a>
+        <a
+          href="#"
+          class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <span
+            class="i-material-symbols-receipt-outline-rounded text-icon-md inline group-hover:hidden"
+          ></span>
+          <span
+            class="i-material-symbols-receipt-rounded text-icon-md hidden group-hover:inline"
+          ></span>
+          <span class="text-xs font-semibold">Riwayat</span>
+        </a>
+        <a
+          href="#"
+          class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <span
+            class="i-material-symbols-person-outline-rounded text-icon-md inline group-hover:hidden"
+          ></span>
+          <span
+            class="i-material-symbols-person-rounded text-icon-md hidden group-hover:inline"
+          ></span>
+          <span class="text-xs font-semibold">Akun</span>
+        </a>
+      </div>
+      <!-- ./ Navbar -->
+    </div>
+  </body>
+</html>

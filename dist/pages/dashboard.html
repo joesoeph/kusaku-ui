@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Rose:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container max-w-[768px]">
+      <div class="flex min-h-dvh flex-col gap-4 bg-green-50 p-4 pb-[80px]">
+        <div class="flex w-full flex-col">
+          <!-- Avatar + Name -->
+          <div class="mb-4 flex">
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <img
+                src="https://avatar.iran.liara.run/public/11"
+                alt="Avatar"
+                class="size-8"
+              />
+              <span class="text-lg font-semibold text-gray-900">John Doe</span>
+            </a>
+          </div>
+          <!-- ./ Avatar + Name -->
+
+          <!-- Card Balance + Action -->
+          <div class="mb-8 flex flex-col">
+            <!-- Card Balance -->
+            <div
+              class="flex h-[165px] flex-col justify-between rounded-2xl bg-gradient-to-b from-brands-light-green to-emerald-400 p-5 text-white"
+            >
+              <h1 class="font-brand text-2xl font-bold uppercase">Kusaku</h1>
+              <h2 class="flex items-center gap-2 text-2xl font-medium">
+                <span
+                  data-balance-value="Rp. 52.000.000,00"
+                  data-show-balance="true"
+                  id="balance"
+                  >Rp. 52.000.000,00</span
+                >
+                <button
+                  id="visibilityButton"
+                  type="button"
+                  class="i-material-symbols-visibility text-icon-lg"
+                ></button>
+              </h2>
+            </div>
+            <!-- ./ Card Balance -->
+
+            <!-- Card Action -->
+            <div class="mt-2 flex gap-3">
+              <button
+                type="button"
+                class="open inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-brands-light-green bg-transparent p-2 text-xs font-semibold uppercase text-brands-light-green hover:bg-brands-light-green hover:text-white focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-transparent disabled:text-gray-400"
+                data-modal-target="modal-topup"
+              >
+                <span
+                  class="i-material-symbols-download-rounded text-icon-sm"
+                ></span>
+                <span>Top Up</span>
+              </button>
+              <button
+                type="button"
+                class="open inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brands-light-green p-2 text-xs font-semibold uppercase text-white hover:bg-brands-dark-green focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+                data-modal-target="modal-transfer"
+              >
+                <span
+                  class="i-material-symbols-upload-rounded text-icon-sm"
+                ></span>
+                <span>Transfer</span>
+              </button>
+            </div>
+            <!-- ./ Card Action -->
+          </div>
+          <!-- ./ Card Balance + Action -->
+
+          <div class="rounded-[20px] bg-white p-2.5 shadow-md">
+            <!-- Card Header -->
+            <div class="mb-2 flex justify-between p-2.5">
+              <p class="font-semibold text-gray-900">Riwayat Transaksi</p>
+              <a
+                href="#"
+                class="text-xs font-semibold text-brands-light-green hover:text-brands-light-green/70 focus:outline-none focus:ring-2 focus:ring-green-400"
+                >Lihat Lainnya</a
+              >
+            </div>
+            <!-- ./ Card Header -->
+
+            <!-- Items -->
+            <a
+              href="#"
+              class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <!-- Left -->
+              <span class="flex items-center gap-5">
+                <span
+                  class="i-material-symbols-download-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                ></span>
+                <span class="flex flex-col">
+                  <span class="line-clamp-2 text-sm font-semibold text-gray-900"
+                    >Ramon Altenwerth</span
+                  >
+                  <span class="line-clamp-1 text-xs text-gray-500"
+                    >90842375</span
+                  >
+                </span>
+              </span>
+              <!-- ./ Left -->
+
+              <!-- Right -->
+              <span class="flex flex-shrink-0 items-center gap-2">
+                <span class="text-xs font-medium text-red-500"
+                  >Rp. 50.000,00</span
+                >
+                <span
+                  class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                ></span>
+              </span>
+              <!-- ./ Right -->
+            </a>
+            <div class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden">
+              <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+            </div>
+            <a
+              href="#"
+              class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <!-- Left -->
+              <span class="flex items-center gap-5">
+                <span
+                  class="i-material-symbols-download-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                ></span>
+                <span class="flex flex-col">
+                  <span class="line-clamp-2 text-sm font-semibold text-gray-900"
+                    >Karen Denesik</span
+                  >
+                  <span class="line-clamp-1 text-xs text-gray-500"
+                    >90842375</span
+                  >
+                </span>
+              </span>
+              <!-- ./ Left -->
+
+              <!-- Right -->
+              <span class="flex flex-shrink-0 items-center gap-2">
+                <span class="text-xs font-medium text-red-500"
+                  >Rp. 50.000,00</span
+                >
+                <span
+                  class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                ></span>
+              </span>
+              <!-- ./ Right -->
+            </a>
+            <div class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden">
+              <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+            </div>
+            <a
+              href="#"
+              class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <!-- Left -->
+              <span class="flex items-center gap-5">
+                <span
+                  class="i-material-symbols-download-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                ></span>
+                <span class="flex flex-col">
+                  <span class="line-clamp-2 text-sm font-semibold text-gray-900"
+                    >Kerry Friesen</span
+                  >
+                  <span class="line-clamp-1 text-xs text-gray-500"
+                    >90842375</span
+                  >
+                </span>
+              </span>
+              <!-- ./ Left -->
+
+              <!-- Right -->
+              <span class="flex flex-shrink-0 items-center gap-2">
+                <span class="text-xs font-medium text-red-500"
+                  >Rp. 50.000,00</span
+                >
+                <span
+                  class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                ></span>
+              </span>
+              <!-- ./ Right -->
+            </a>
+            <div class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden">
+              <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+            </div>
+            <a
+              href="#"
+              class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <!-- Left -->
+              <span class="flex items-center gap-5">
+                <span
+                  class="i-material-symbols-download-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                ></span>
+                <span class="flex flex-col">
+                  <span class="line-clamp-2 text-sm font-semibold text-gray-900"
+                    >Ralph Skiles</span
+                  >
+                  <span class="line-clamp-1 text-xs text-gray-500"
+                    >90842375</span
+                  >
+                </span>
+              </span>
+              <!-- ./ Left -->
+
+              <!-- Right -->
+              <span class="flex flex-shrink-0 items-center gap-2">
+                <span class="text-xs font-medium text-red-500"
+                  >Rp. 50.000,00</span
+                >
+                <span
+                  class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                ></span>
+              </span>
+              <!-- ./ Right -->
+            </a>
+            <div class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden">
+              <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+            </div>
+            <!-- ./ Items -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <div
+        class="fixed bottom-0 left-0 z-10 flex w-full justify-evenly bg-white"
+      >
+        <a
+          href="#"
+          class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <span
+            class="i-material-symbols-home-outline-rounded inline text-icon-md group-hover:hidden"
+          ></span>
+          <span
+            class="i-material-symbols-home-rounded hidden text-icon-md group-hover:inline"
+          ></span>
+          <span class="text-xs font-semibold">Beranda</span>
+        </a>
+        <a
+          href="#"
+          class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <span
+            class="i-material-symbols-receipt-outline-rounded inline text-icon-md group-hover:hidden"
+          ></span>
+          <span
+            class="i-material-symbols-receipt-rounded hidden text-icon-md group-hover:inline"
+          ></span>
+          <span class="text-xs font-semibold">Riwayat</span>
+        </a>
+        <a
+          href="#"
+          class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <span
+            class="i-material-symbols-person-outline-rounded inline text-icon-md group-hover:hidden"
+          ></span>
+          <span
+            class="i-material-symbols-person-rounded hidden text-icon-md group-hover:inline"
+          ></span>
+          <span class="text-xs font-semibold">Akun</span>
+        </a>
+      </div>
+      <!-- ./ Navbar -->
+
+      <!-- Modal Top Up -->
+      <dialog
+        id="modal-topup"
+        class="m-0 size-full bg-transparent backdrop:bg-black/50 backdrop:backdrop-blur-lg open:flex open:max-h-none open:max-w-none open:flex-col open:justify-end"
+      >
+        <div class="flex flex-col">
+          <div class="flex justify-between px-6 pb-8">
+            <button
+              type="button"
+              class="invisible inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs font-semibold uppercase text-brands-light-green hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+            >
+              <span
+                class="i-material-symbols-chevron-left-rounded text-icon-sm"
+              ></span>
+              <span>back</span></button
+            ><button
+              type="button"
+              class="close inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs font-semibold uppercase text-brands-light-green hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+              data-modal-target="modal-topup"
+            >
+              <span
+                class="i-material-symbols-close-rounded text-icon-sm"
+              ></span>
+              <span>Close</span>
+            </button>
+          </div>
+          <div class="flex flex-col gap-8 rounded-t-[36px] bg-white p-6">
+            <!-- Form Top Up -->
+            <form action="post" action="#" class="flex flex-col gap-4">
+              <div class="flex flex-col gap-y-1.5">
+                <div class="relative">
+                  <input
+                    type="number"
+                    inputmode="numeric"
+                    placeholder="Nominal rupiah"
+                    class="placeholder:text-gray400 peer w-full rounded-2xl border border-gray-400 bg-white p-3 ps-12 text-sm text-gray-900 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:outline-none focus:ring-2 focus:ring-green-400 focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                  />
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-4 text-icon-md text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900"
+                  >
+                    <span
+                      class="i-material-symbols-account-balance-wallet"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="inline-flex items-center justify-center gap-2 rounded-xl bg-brands-light-green p-2 text-xs font-semibold uppercase text-white hover:bg-brands-dark-green focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+              >
+                <span
+                  class="i-material-symbols-send-rounded text-icon-sm"
+                ></span>
+                <span>Top Up</span>
+              </button>
+            </form>
+            <!-- ./ Form Top Up -->
+          </div>
+        </div>
+      </dialog>
+      <!-- ./ Modal Top Up -->
+
+      <!-- Modal Transfer -->
+      <dialog
+        id="modal-transfer"
+        class="m-0 size-full bg-transparent backdrop:bg-black/50 backdrop:backdrop-blur-lg open:flex open:max-h-none open:max-w-none open:flex-col open:justify-end"
+      >
+        <div class="flex flex-col">
+          <div class="flex justify-between px-6 pb-8">
+            <button
+              type="button"
+              id="button-back-modal-content"
+              class="invisible inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs font-semibold uppercase text-brands-light-green hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+              data-history-back="[]"
+            >
+              <span
+                class="i-material-symbols-chevron-left-rounded text-icon-sm"
+              ></span>
+              <span>back</span></button
+            ><button
+              type="button"
+              class="close inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs font-semibold uppercase text-brands-light-green hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+              data-modal-target="modal-transfer"
+            >
+              <span
+                class="i-material-symbols-close-rounded text-icon-sm"
+              ></span>
+              <span>Close</span>
+            </button>
+          </div>
+          <div class="flex flex-col gap-8 rounded-t-[36px] bg-white p-6">
+            <!-- Section: Account Check -->
+            <div id="modal-content--account-check">
+              <form action="#" method="post" class="flex w-full flex-col gap-4">
+                <!-- Logo + Search Contact Button -->
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-4">
+                    <img
+                      src="../assets/images/logo-green.svg"
+                      alt="Logo"
+                      class="h-5"
+                    />
+                  </div>
+                  <a
+                    href="#"
+                    class="text-xs font-semibold text-brands-light-green hover:text-brands-light-green/70 focus:outline-none focus:ring-2 focus:ring-green-400"
+                    onclick="showSearchContact()"
+                    >Cari Kontak</a
+                  >
+                </div>
+                <!-- ./ Logo + Search Contact Button -->
+
+                <!-- Input + Button -->
+
+                <div class="flex flex-col gap-y-1.5">
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="Masukan KUSAKU ID"
+                      class="placeholder:text-gray400 peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 text-sm text-gray-900 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:outline-none focus:ring-2 focus:ring-green-400 focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                    />
+                    <div
+                      class="absolute inset-y-0 end-0 flex items-center pe-4 text-icon-md text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900"
+                    >
+                      <span class="i-material-symbols-search-rounded"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="inline-flex items-center justify-center gap-2 rounded-xl bg-brands-light-green p-2 text-xs font-semibold uppercase text-white hover:bg-brands-dark-green focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+                >
+                  <span
+                    class="i-material-symbols-search-rounded text-icon-sm"
+                  ></span>
+                  <span>Cek Rekening</span>
+                </button>
+                <!-- ./ Input + Button -->
+              </form>
+            </div>
+            <!-- ./ Section: Account Check -->
+
+            <!-- Section: Search Contact -->
+            <div id="modal-content--search-contact" class="hidden">
+              <div class="flex w-full flex-col">
+                <!-- Card Header -->
+                <div class="mb-2 flex flex-col gap-y-1.5">
+                  <div class="relative">
+                    <input
+                      type="text"
+                      placeholder="Cari nama orang / no rekening"
+                      class="placeholder:text-gray400 peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 text-sm text-gray-900 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:outline-none focus:ring-2 focus:ring-green-400 focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                    />
+                    <div
+                      class="absolute inset-y-0 end-0 flex items-center pe-4 text-icon-md text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900"
+                    >
+                      <span class="i-material-symbols-search"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./ Card Header -->
+
+                <!-- Items -->
+                <a
+                  href="#"
+                  class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+                  onclick="showInputNominal()"
+                >
+                  <!-- Left -->
+                  <span class="flex items-center gap-5">
+                    <span
+                      class="i-material-symbols-person-outline-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                    ></span>
+                    <span class="flex flex-col">
+                      <span
+                        class="line-clamp-2 text-sm font-semibold text-gray-900"
+                        >Daryl Bergstrom</span
+                      >
+                      <span class="line-clamp-1 text-xs text-gray-500"
+                        >90842375</span
+                      >
+                    </span>
+                  </span>
+                  <!-- ./ Left -->
+
+                  <!-- Right -->
+                  <span class="flex flex-shrink-0 items-center gap-2">
+                    <span
+                      class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                    ></span>
+                  </span>
+                  <!-- ./ Right -->
+                </a>
+                <div
+                  class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden"
+                >
+                  <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+                </div>
+                <a
+                  href="#"
+                  class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+                  onclick="showInputNominal()"
+                >
+                  <!-- Left -->
+                  <span class="flex items-center gap-5">
+                    <span
+                      class="i-material-symbols-person-outline-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                    ></span>
+                    <span class="flex flex-col">
+                      <span
+                        class="line-clamp-2 text-sm font-semibold text-gray-900"
+                        >Mrs. Doreen Adams</span
+                      >
+                      <span class="line-clamp-1 text-xs text-gray-500"
+                        >90842375</span
+                      >
+                    </span>
+                  </span>
+                  <!-- ./ Left -->
+
+                  <!-- Right -->
+                  <span class="flex flex-shrink-0 items-center gap-2">
+                    <span
+                      class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                    ></span>
+                  </span>
+                  <!-- ./ Right -->
+                </a>
+                <div
+                  class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden"
+                >
+                  <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+                </div>
+                <a
+                  href="#"
+                  class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+                  onclick="showInputNominal()"
+                >
+                  <!-- Left -->
+                  <span class="flex items-center gap-5">
+                    <span
+                      class="i-material-symbols-person-outline-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                    ></span>
+                    <span class="flex flex-col">
+                      <span
+                        class="line-clamp-2 text-sm font-semibold text-gray-900"
+                        >Dr. Reginald Carroll</span
+                      >
+                      <span class="line-clamp-1 text-xs text-gray-500"
+                        >90842375</span
+                      >
+                    </span>
+                  </span>
+                  <!-- ./ Left -->
+
+                  <!-- Right -->
+                  <span class="flex flex-shrink-0 items-center gap-2">
+                    <span
+                      class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                    ></span>
+                  </span>
+                  <!-- ./ Right -->
+                </a>
+                <div
+                  class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden"
+                >
+                  <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+                </div>
+                <a
+                  href="#"
+                  class="flex justify-between rounded-2xl p-3 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-green-400"
+                  onclick="showInputNominal()"
+                >
+                  <!-- Left -->
+                  <span class="flex items-center gap-5">
+                    <span
+                      class="i-material-symbols-person-outline-rounded flex-shrink-0 text-icon-lg text-brands-light-green"
+                    ></span>
+                    <span class="flex flex-col">
+                      <span
+                        class="line-clamp-2 text-sm font-semibold text-gray-900"
+                        >Eric Jenkins</span
+                      >
+                      <span class="line-clamp-1 text-xs text-gray-500"
+                        >90842375</span
+                      >
+                    </span>
+                  </span>
+                  <!-- ./ Left -->
+
+                  <!-- Right -->
+                  <span class="flex flex-shrink-0 items-center gap-2">
+                    <span
+                      class="i-material-symbols-chevron-right-rounded text-icon-md text-gray-900"
+                    ></span>
+                  </span>
+                  <!-- ./ Right -->
+                </a>
+                <div
+                  class="my-2.5 flex gap-4 whitespace-nowrap px-5 last:hidden"
+                >
+                  <div class="flex-grow-1 h-[1px] w-full bg-gray-300"></div>
+                  <!-- ./ Items -->
+                </div>
+              </div>
+            </div>
+            <!-- ./ Section: Search Contact -->
+
+            <!-- Section: Input Nominal -->
+            <div id="modal-content--input-nominal" class="hidden">
+              <form action="#" method="post" class="flex w-full flex-col gap-4">
+                <!-- Logo + Search Contact Button -->
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-4">
+                    <img
+                      src="../assets/images/logo-green.svg"
+                      alt="Logo"
+                      class="h-5"
+                    />
+                    <div class="flex items-center gap-2 text-xs font-medium">
+                      <span>Jane Dane</span>
+                      <span
+                        class="i-material-symbols-circle text-[4px] text-gray-500"
+                      ></span>
+                      <span>239523770</span>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    class="text-xs font-semibold text-brands-light-green hover:text-brands-light-green/70 focus:outline-none focus:ring-2 focus:ring-green-400"
+                    onclick="showSearchContact()"
+                    >Cari Kontak</a
+                  >
+                </div>
+                <!-- ./ Logo + Search Contact Button -->
+
+                <!-- Input + Button -->
+
+                <div class="flex flex-col gap-y-1.5">
+                  <div class="relative">
+                    <input
+                      type="number"
+                      inputmode="numeric"
+                      placeholder="Nominal rupiah"
+                      class="placeholder:text-gray400 peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 text-sm text-gray-900 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:outline-none focus:ring-2 focus:ring-green-400 focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                    />
+                    <div
+                      class="absolute inset-y-0 end-0 flex items-center pe-4 text-icon-md text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900"
+                    >
+                      <span class="i-material-symbols-search-rounded"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="inline-flex items-center justify-center gap-2 rounded-xl bg-brands-light-green p-2 text-xs font-semibold uppercase text-white hover:bg-brands-dark-green focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+                >
+                  <span
+                    class="i-material-symbols-send-rounded text-icon-sm"
+                  ></span>
+                  <span>Lanjut Kirim</span>
+                </button>
+                <!-- ./ Input + Button -->
+              </form>
+            </div>
+            <!-- ./ Section: Input Nominal -->
+          </div>
+        </div>
+      </dialog>
+      <!-- ./ Modal Transfer -->
+    </div>
+  </body>
+</html>
+<script src="../assets/js/main.js"></script>

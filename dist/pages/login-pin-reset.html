@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Reset PIN</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Rose:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="container max-w-[768px]">
+      <div
+        class="relative flex h-dvh flex-col items-center justify-center gap-4 bg-green-50 p-4"
+      >
+        <div class="flex w-full flex-col">
+          <!-- Illustration -->
+          <img
+            src="../assets/images/fingerprint.svg"
+            alt="Illustration"
+            class="h-[160px]"
+          />
+          <!-- ./ Illustration -->
+
+          <!-- Title + Description -->
+          <div class="mb-5 mt-8 flex flex-col">
+            <h1 class="text-center text-lg font-semibold text-gray-900">
+              Reset PIN Lama
+            </h1>
+            <p class="text-center text-xs font-medium text-gray-400">
+              Buat PIN yang aman dan mudah diingat
+            </p>
+          </div>
+          <!-- ./ Title + Description -->
+          <!-- Form -->
+          <form method="post" action="#" class="flex flex-col gap-4">
+            <!-- Input PIN -->
+            <div class="flex flex-col gap-y-1.5">
+              <div class="relative">
+                <input
+                  type="password"
+                  placeholder="6 Digit PIN"
+                  class="peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 ps-12 text-sm font-normal text-gray-900 placeholder:text-gray-400 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:outline-none focus:ring-2 focus:ring-green-400 focus:invalid:ring-red-900 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-100"
+                />
+                <div
+                  class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-4 text-icon-md text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900"
+                >
+                  <span class="i-material-symbols-security-rounded"></span>
+                </div>
+              </div>
+            </div>
+            <!-- ./ Input PIN -->
+            <!-- Input Confirm PIN -->
+            <div class="flex flex-col gap-y-1.5">
+              <div class="relative">
+                <input
+                  type="password"
+                  placeholder="Konfirmasi Ulang PIN"
+                  class="peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 ps-12 text-sm font-normal text-gray-900 placeholder:text-gray-400 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:outline-none focus:ring-2 focus:ring-green-400 focus:invalid:ring-red-900 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-100"
+                />
+                <div
+                  class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-4 text-icon-md text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900"
+                >
+                  <span class="i-material-symbols-security-rounded"></span>
+                </div>
+              </div>
+            </div>
+            <!-- ./ Input Confirm PIN -->
+
+            <!-- Button Action -->
+            <button
+              type="button"
+              class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brands-light-green p-2.5 text-sm font-semibold uppercase text-white hover:bg-brands-dark-green focus:outline-none focus:ring-2 focus:ring-green-400 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+            >
+              <span>Reset PIN</span>
+              <span
+                class="i-material-symbols-chevron-right-rounded text-icon-md"
+              ></span>
+            </button>
+            <!-- ./ Button Action -->
+          </form>
+          <!-- ./ Form -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
